@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane blendMode="DARKEN" prefHeight="328.0" prefWidth="634.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <ImageView fitHeight="328.0" fitWidth="634.0" layoutX="0.0" layoutY="0.0">
+         <image>
+            <Image url="@Screen%20Shot%202022-05-25%20at%2012.43.47%20AM.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="previousStep" blendMode="EXCLUSION" layoutX="20.0" layoutY="157.0" mnemonicParsing="false" onAction="#previousStep" prefHeight="27.0" prefWidth="66.0" text="Previous" />
+      <Button fx:id="nextStep" blendMode="EXCLUSION" layoutX="98.0" layoutY="157.0" mnemonicParsing="false" onAction="#nextStep" prefHeight="27.0" prefWidth="66.0" text="Next" />
+      <Text fx:id="stepdisplay" fill="#dadada" layoutX="141.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+         <font>
+            <Font name="Apple Braille Pinpoint 8 Dot" size="19.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="actionChooser" blendMode="EXCLUSION" layoutX="230.0" layoutY="53.0" onAction="#actionChosen" prefWidth="150.0" />
+      <Text fill="#dadada" layoutX="275.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Action:">
+         <font>
+            <Font name="Apple Braille Pinpoint 8 Dot" size="19.0" />
+         </font>
+      </Text>
+      <Text fill="#dadada" layoutX="276.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Value:">
+         <font>
+            <Font name="Apple Braille Pinpoint 8 Dot" size="19.0" />
+         </font>
+      </Text>
+      <TextField fx:id="actionValue" blendMode="DIFFERENCE" layoutX="222.0" layoutY="157.0" onKeyReleased="#actionChosen" prefHeight="27.0" prefWidth="156.0" />
+      <TextField fx:id="numberOfSteps" blendMode="DIFFERENCE" layoutX="6.0" layoutY="53.0" onKeyReleased="#stepsEntered" promptText="enter number of steps " />
+      <Text fill="#dadada" layoutX="16.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of steps">
+         <font>
+            <Font name="Apple Braille Pinpoint 8 Dot" size="19.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="specialKeyChooser" blendMode="EXCLUSION" layoutX="438.0" layoutY="53.0" onAction="#actionChosen" prefWidth="150.0" promptText="commands" />
+      <Text fill="#dadada" layoutX="399.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Special keys &amp; commands">
+         <font>
+            <Font name="Apple Braille Pinpoint 8 Dot" size="19.0" />
+         </font>
+      </Text>
+      <Text fill="#dadada" layoutX="29.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="current step:">
+         <font>
+            <Font name="Apple Braille Pinpoint 8 Dot" size="19.0" />
+         </font>
+      </Text>
+      <Text fill="#dadada" layoutX="442.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mouse direction">
+         <font>
+            <Font name="Apple Braille Pinpoint 8 Dot" size="19.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="mouseDirectionChooser" blendMode="EXCLUSION" layoutX="440.0" layoutY="157.0" onAction="#actionChosen" prefWidth="150.0" promptText="direction " />
+      <Button fx:id="btnStart" blendMode="EXCLUSION" layoutX="247.0" layoutY="265.0" mnemonicParsing="false" onAction="#StartBtn" prefHeight="27.0" prefWidth="107.0" text="Start" />
+      <TextField fx:id="repeatNumber" blendMode="DIFFERENCE" layoutX="6.0" layoutY="265.0" promptText="number of times to repeat" />
+      <Text fill="#dadada" layoutX="450.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mouse buttons">
+         <font>
+            <Font name="Apple Braille Pinpoint 8 Dot" size="19.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="mouseButtonChooser" blendMode="EXCLUSION" layoutX="437.0" layoutY="265.0" onAction="#actionChosen" prefWidth="150.0" promptText="buttons" />
+      <Button fx:id="btnHelp" blendMode="RED" layoutX="609.0" layoutY="301.0" mnemonicParsing="false" onAction="#helpNeed" opacity="0.35" text="?" />
+   </children>
+</AnchorPane>
